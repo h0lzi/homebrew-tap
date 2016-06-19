@@ -16,4 +16,4 @@ brew linkapps plex-media-player
 Open /Applications Plex Media Player
 
 ## Problems:
-I don't have sound in my tests. (Will let someone investigate)
+homebrew qt5 does not work. Binary qt5 download will probably be not excapted to homebrew

@@ -8,7 +8,8 @@ class PlexMediaPlayer < Formula
 
   depends_on "cmake" => :build
   depends_on "ninja" => :build
-  depends_on "qt5"
+  # disabled as homebrew qt5 does not quite work
+  #depends_on "qt5"
   depends_on "mpv" #?? how to do --with-shared --HEAD
 
   def install
@@ -17,7 +18,6 @@ class PlexMediaPlayer < Formula
       -GNinja
       -DCMAKE_INSTALL_PREFIX=#{prefix}
       -DCMAKE_BUILD_TYPE=Debug
-      -DQTROOT=/usr/local/opt/qt5
       -DMPV_INCLUDE_DIR=/usr/local/include/mpv
       -DMPV_LIBRARY=/usr/local/lib/libmpv.dylib
     ]
